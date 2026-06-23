@@ -1,54 +1,68 @@
-
-
 <!DOCTYPE html>
 <html>
 <head>
+
+    <!-- Makes the page fit phone screens properly -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Sam & Liv's Date Ideas</title>
 
     <style>
         body {
-            font-family: Arial;
-            text-align: center;
+            font-family: Arial, sans-serif;
             background: pink;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
         }
 
+        /* Main title */
+        h1 {
+            font-size: 40px;
+        }
+
+        /* Date idea boxes */
         .box {
             background: white;
-            padding: 20px;
-            margin: 20px auto;
-            width: 300px;
-            border-radius: 10px;
+            padding: 25px;
+            margin: 15px auto;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            font-size: 28px;
         }
 
+        /* Button */
         button {
-            padding: 10px;
-            font-size: 16px;
+            font-size: 24px;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            background: hotpink;
+            color: white;
+        }
+
+        /* Random idea text */
+        #idea {
+            font-size: 32px;
+            margin-top: 20px;
         }
     </style>
+
 </head>
 <body>
 
-    <!-- Change the title here -->
+    <!-- Change names here -->
     <h1>❤️ Sam & Liv's Date Ideas ❤️</h1>
 
-    <!-- Change or add date ideas below -->
-    <div class="box">
-        🍿 Movie Night
-    </div>
+    <!-- Date ideas shown on page -->
+    <div class="box">🍿 Movie Night</div>
+    <div class="box">🍕 Make Pizza Together</div>
+    <div class="box">🌳 Go For A Picnic</div>
+    <div class="box">🎳 Go Bowling</div>
 
-    <div class="box">
-        🍕 Make Pizza Together
-    </div>
+    <br>
 
-    <div class="box">
-        🌳 Go For A Picnic
-    </div>
-
-    <div class="box">
-        🎳 Go Bowling
-    </div>
-
-    <!-- Random date idea button -->
     <button onclick="newIdea()">
         Pick A Random Date Idea
     </button>
@@ -56,20 +70,25 @@
     <h2 id="idea"></h2>
 
     <script>
-        /* Add more ideas inside the quotes */
+
+        /* Add new ideas here */
+
         let ideas = [
             "🍿 Movie Night",
             "🍕 Make Pizza Together",
             "🌳 Go For A Picnic",
             "🎳 Go Bowling",
             "🎮 Gaming Night",
-            "☕ Coffee Date"
+            "☕ Coffee Date",
+            "🌅 Watch The Sunset",
+            "🍔 Go Out For Food"
         ];
 
         function newIdea() {
             let random = Math.floor(Math.random() * ideas.length);
             document.getElementById("idea").innerHTML = ideas[random];
         }
+
     </script>
 
 </body>
