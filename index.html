@@ -1,98 +1,111 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-
-    <!-- Makes the page fit phone screens properly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Sam & Liv's Date Ideas</title>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: pink;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
+```
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: pink;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
 
-        /* Main title */
-        h1 {
-            font-size: 40px;
-        }
+    h1 {
+        font-size: 40px;
+    }
 
-        /* Date idea boxes */
-        .box {
-            background: white;
-            padding: 25px;
-            margin: 15px auto;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            font-size: 28px;
-        }
+    .box {
+        background: white;
+        padding: 25px;
+        margin: 15px auto;
+        border-radius: 15px;
+        width: 90%;
+        max-width: 600px;
+        font-size: 28px;
+    }
 
-        /* Button */
-        button {
-            font-size: 24px;
-            padding: 15px 25px;
-            border: none;
-            border-radius: 10px;
-            background: hotpink;
-            color: white;
-        }
+    button {
+        font-size: 24px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 10px;
+        background: hotpink;
+        color: white;
+        cursor: pointer;
+    }
 
-        /* Random idea text */
-        #idea {
-            font-size: 32px;
-            margin-top: 20px;
-        }
-    </style>
+    #idea {
+        font-size: 32px;
+        margin-top: 20px;
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        display: inline-block;
+    }
+
+    .corner-box {
+        position: fixed;
+        top: 15px;
+        right: 15px;
+        background: white;
+        padding: 15px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+```
 
 </head>
 <body>
 
-    <!-- Change names here -->
-    <h1>❤️ Sam & Liv's Date Ideas ❤️</h1>
+```
+<a href="presents.html" class="corner-box">🎁 Presents</a>
 
-    <!-- Date ideas shown on page -->
-    <div class="box">🍿 Movie Night</div>
-    <div class="box">🍕 Make Pizza Together</div>
-    <div class="box">🌳 Go For A Picnic</div>
-    <div class="box">🎳 Go Bowling</div>
-    <div class="box">🌈Go and sit in a field</div>
-    <div class="box">🏪Go to an abandond building</div>
-    <div class="box">👩‍🎨Make something</div>
+<h1>❤️ Sam & Liv's Date Ideas ❤️</h1>
 
-    <br>
+<div class="box">🍿 Movie Night</div>
+<div class="box">🍕 Make Pizza Together</div>
+<div class="box">🌳 Go For A Picnic</div>
+<div class="box">🎳 Go Bowling</div>
+<div class="box">🌈 Go Sit In A Field</div>
+<div class="box">🏪 Go To An Abandoned Building</div>
+<div class="box">👩‍🎨 Make Something</div>
 
-    <button onclick="newIdea()">
-        Pick A Random Date Idea
-    </button>
+<br><br>
 
-    <h2 id="idea"></h2>
+<button onclick="newIdea()">Pick A Random Date Idea</button>
 
-    <script>
+<h2 id="idea"></h2>
 
-        /* Add new ideas here */
+<script>
+    let ideas = [
+        "🍿 Movie Night",
+        "🍕 Make Pizza Together",
+        "🌳 Go For A Picnic",
+        "🎳 Go Bowling",
+        "🌈 Go Sit In A Field",
+        "🏪 Go To An Abandoned Building",
+        "👩‍🎨 Make Something",
+        "🎮 Gaming Night",
+        "☕ Coffee Date",
+        "🌅 Watch The Sunset",
+        "🍔 Go Out For Food"
+    ];
 
-        let ideas = [
-            "🍿 Movie Night",
-            "🍕 Make Pizza Together",
-            "🌳 Go For A Picnic",
-            "🎳 Go Bowling",
-            "🎮 Gaming Night",
-            "☕ Coffee Date",
-            "🌅 Watch The Sunset",
-            "🍔 Go Out For Food"
-        ];
-
-        function newIdea() {
-            let random = Math.floor(Math.random() * ideas.length);
-            document.getElementById("idea").innerHTML = ideas[random];
-        }
-
-    </script>
+    function newIdea() {
+        let random = Math.floor(Math.random() * ideas.length);
+        document.getElementById("idea").innerHTML = ideas[random];
+    }
+</script>
+```
 
 </body>
 </html>
