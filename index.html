@@ -1,1 +1,76 @@
+utely. Here's a much simpler version that's easy for a beginner to edit:
 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sam & Liv's Date Ideas</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: pink;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Change the title here -->
+    <h1>❤️ Sam & Liv's Date Ideas ❤️</h1>
+
+    <!-- Change or add date ideas below -->
+    <div class="box">
+        🍿 Movie Night
+    </div>
+
+    <div class="box">
+        🍕 Make Pizza Together
+    </div>
+
+    <div class="box">
+        🌳 Go For A Picnic
+    </div>
+
+    <div class="box">
+        🎳 Go Bowling
+    </div>
+
+    <!-- Random date idea button -->
+    <button onclick="newIdea()">
+        Pick A Random Date Idea
+    </button>
+
+    <h2 id="idea"></h2>
+
+    <script>
+        /* Add more ideas inside the quotes */
+        let ideas = [
+            "🍿 Movie Night",
+            "🍕 Make Pizza Together",
+            "🌳 Go For A Picnic",
+            "🎳 Go Bowling",
+            "🎮 Gaming Night",
+            "☕ Coffee Date"
+        ];
+
+        function newIdea() {
+            let random = Math.floor(Math.random() * ideas.length);
+            document.getElementById("idea").innerHTML = ideas[random];
+        }
+    </script>
+
+</body>
+</html>
